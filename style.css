@@ -227,5 +227,168 @@ body {
   width: 10vw;
   margin: 0;
   padding: 0;
+  opacity: 0;
+  animation: loadNow 4s ease-in-out forwards;
+  transform: translateX(0px);
+}
 
+@keyframes loadNow {
+  0% {
+    opacity: 0;
+    transform: translateX(10px)
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0px)
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0px)
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-10px)
+  }
+}
+
+.fifth-block {
+  position: absolute;
+  width: 0%;
+  height: 100vh;
+  background: #f0f0f0;
+  animation: expandNow 1.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 4s;
+}
+
+@keyframes expandNow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  margin: 2em;
+  font-size: 18px;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  margin: 2em;
+  font-family: 'Beatrice Display TRIAL', sans-serif;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.content {
+  position: absolute;
+  width: 440px;
+  top: 30%;
+  left: 10%;
+  transform: translateX(-50%, -50%);
+  text-align: left;
+}
+
+.heading {
+  font-family: 'Beatrice Display TRIAL', sans-serif;
+  font-weight: bolder;
+  font-size: 45px;
+}
+
+.description {
+  font-family: 'Noctis', sans-serif;
+  font-weight: lighter;
+}
+
+.description p {
+  margin-top: 0px;
+}
+
+.link button {
+  font-family: 'Beatrice Display TRIAL', sans-serif;
+  border-radius: none;
+  padding: 15px 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: #272727;
+  color: #fff;
+}
+
+.img .hero-image {
+  width: 440px;
+}
+
+.img {
+  position: fixed;
+  z-index: 0;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+}
+
+img {
+  opacity: 0;
+  animation: appearImg 0.5s linear forwards;
+  animation-delay: 6s;
+}
+
+img::after {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #272727;
+  position: absolute;
+  animation: rev-img 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 5.5s;
+}
+
+@keyframes rev-img {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 0;
+    width: 440px;
+  }
+  100% {
+    left: 440px;
+    width: 0;
+  }
+}
+
+@keyframes appearImg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.media ul {
+  list-style: none;
+  position: fixed;
+  right: 25px;
+  bottom: 0;
+  padding: 10px
+}
+
+.media ul li {
+  font-size: 20px;
+  margin: 25px 0;
+}
+
+.watch {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 2em;
 }
