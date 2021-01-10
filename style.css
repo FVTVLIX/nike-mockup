@@ -9,6 +9,8 @@ body {
   background: #fff;
 }
 
+/****** Splash screen image #1 *******/
+
 .temp {
   position: absolute;
   width: 100%;
@@ -67,6 +69,8 @@ body {
   }
 }
 
+/****** Splash screen image #2 *******/
+
 .temp2 {
   position: absolute;
   width: 100%;
@@ -112,6 +116,8 @@ body {
     opacity: 0;
   }
 }
+
+/****** Splash screen image #3 *******/
 
 .temp3 {
   position: absolute;
@@ -320,7 +326,7 @@ body {
 }
 
 .img .hero-image {
-  width: 440px;
+  width: 640px;
 }
 
 .img {
