@@ -171,6 +171,8 @@ body {
   }
 }
 
+/* Colored blocks for tranition effect. All of them share the same keyframe effect */
+
 .first-block {
   position: absolute;
   width: 0%;
@@ -222,6 +224,8 @@ body {
   animation-delay: 3s;
 }
 
+/* Front Logo for the initial transition with its own keyframe animation */
+
 .loader {
   position: absolute;
   top: 50%;
@@ -256,6 +260,8 @@ body {
     transform: translateX(-10px)
   }
 }
+
+/**** Last block that is desplayed on main page  *****/
 
 .fifth-block {
   position: absolute;
@@ -362,10 +368,10 @@ img::after {
   }
   50% {
     left: 0;
-    width: 440px;
+    width: 540px;
   }
   100% {
-    left: 440px;
+    left: 540px;
     width: 0;
   }
 }
